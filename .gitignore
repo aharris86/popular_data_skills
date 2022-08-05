@@ -1,0 +1,7 @@
+/.idea
+/.vscode
+/build
+/dist
+/popular_data_skills.egg-info
+/README.rst
+/venv

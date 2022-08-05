@@ -1,0 +1,43 @@
+html {
+    height: 100%;
+  }
+  
+h1, h2, h3, h4, h5, h6 {
+  color: #04063c;
+}
+
+.accordion-button:not(.collapsed) {
+
+  background-color: #f9f9f9;
+}
+
+.btn-group {
+  width: 100%;
+  text-align: center;
+}
+
+.radio-group {
+  width: 100%;
+}
+
+/* restyle radio items */
+.radio-group .form-check {
+  padding-left: 0;
+  width: 100%;
+}
+
+.radio-group .btn-group > .form-check:not(:last-child) > .btn {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  width: 100%;
+}
+
+.radio-group .btn-group > .form-check:not(:first-child) > .btn {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  margin-left: -1px;
+  width: 100%;
+}
+
+
+
