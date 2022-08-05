@@ -1,7 +1,9 @@
+
 import dash
 import dash_bootstrap_components as dbc
 from dash import dcc, html, Input, Output, State, callback_context
-from dashboard import plots as plots
+import popular_data_skills.dashboard.helpers_plots as plots
+
 
 # check out
 external_stylesheets = [dbc.themes.BOOTSTRAP]
@@ -60,7 +62,7 @@ HEADER_STYLE = {
     # "right": 0,
     # "height": header_height,
     # "padding": "2rem 1rem",
-   # "background-color": "#DBE2EA",
+    # "background-color": "#DBE2EA",
 }
 
 # CONTENT_STYLE = {
@@ -86,7 +88,7 @@ CONTENT_STYLE = {
     # "margin-left": sidebar_width,
     #    "margin-right": "1rem",
     #     "padding": "1rem 1rem",
-    #"background-color": "#D0DEEE"
+    # "background-color": "#D0DEEE"
 }
 # Components
 header = html.Div([
@@ -238,19 +240,14 @@ layout_button = html.Div(
             inputClassName="btn-check",
             labelClassName="btn btn-outline-primary",
             labelCheckedClassName="active",
-            options=[                 
-                     {"label": "1 Profile", "value": False},
-                     {"label": "Compare", "value": True},
+            options=[
+                {"label": "1 Profile", "value": False},
+                {"label": "Compare", "value": True},
             ],
             value=True,
         ),
-    ], className="radio-group", style={'width' : '100%'},
+    ], className="radio-group", style={'width': '100%'},
 )
-
-
-
-
-
 
 
 sidebar = (
@@ -501,13 +498,12 @@ app.layout = html.Div([
 #     return on_off
 
 
-
 # @app.server.route('/assests/<path:path>')
 # def static_file(path):
 #     static_folder = os.path.join(os.getcwd(), 'assests')
 #     return send_from_directory(static_folder, path)
 
-# change layout 
+# change layout
 @app.callback(
     Output("plot_layout", "children"),
     #Output("job_profile2_button", "disabled"),
@@ -541,7 +537,7 @@ def change_layout(layout_button_id):
         Input("job_profile1_button", 'n_clicks'),
         Input("skill_dropdown", 'value'),
         Input("job_profile2_button", 'n_clicks'),
-        
+
     ],
     [
         State("job_profile1_job", 'value'),

@@ -3,17 +3,14 @@ import numpy as np
 import plotly.graph_objects as go
 import plotly.express as px
 from plotly.subplots import make_subplots
-from utilities import utils_filter as utils
-
-CSV_DATA_PATH = r'data\processed_data\final_data.csv'
-KWS_GROUPS_PATH = r'data\processed_data\keywords\keyword_groups.txt'
-
+import popular_data_skills.dashboard.helpers_filter as filter
+import popular_data_skills.config.config as config
 
 class JobFilter():
 
     def __init__(self, job: str, experience: str, degree: str, ):
         # Read the job data into pandas dataframe
-        job_data = pd.read_csv(CSV_DATA_PATH, index_col=False)
+        job_data = pd.read_csv(config.FINAL_DATA_FILE, index_col=False)
         self.background_color = "white"
 
         self.primary_color = "#2fa4e7"
@@ -26,7 +23,7 @@ class JobFilter():
         self._job_list = job_data['job'].unique()
         self._degree_list = sorted(job_data['degree_level'].unique())
         self._experience_list = sorted(job_data['experience'].unique())
-        self._group_list = utils.group_list()
+        self._group_list = filter.group_list()
 
         # Add new column no degree
         job_data['no_degree'] = job_data['degree_level'].apply(
@@ -34,11 +31,11 @@ class JobFilter():
 
         # Drop unuseful columns
         info_columns = ['company_name', 'country', 'job_title', 'location',
-                        'date_posted', 'applicant_count', 'job_description_lines', 'software_suite', ]
+                        'date_posted', 'applicant_count', 'job_description_lines', ]
         job_data = job_data.drop(info_columns, axis=1)
 
         # Filter data as per profile
-        filtered_df = utils.filter_df(job_data, job, experience, degree)
+        filtered_df = filter.filter_df(job_data, job, experience, degree)
 
         # Drop catagorical columns use to filter df that are no longer needed
         drop_columns = ['job', 'experience', 'degree_level']
@@ -56,11 +53,11 @@ class JobFilter():
                        )
 
         filtered_df['groups'] = filtered_df['index'].apply(
-            utils.add_groups).sort_values()
+            filter.add_groups).sort_values()
         filtered_df['index'] = filtered_df['index'].replace({'no_degree': 'no degree stated',
                                                             'degree': 'any degree'})
 
-        group_total_df, filtered_df = utils.get_group_totals(filtered_df)
+        group_total_df, filtered_df = filter.get_group_totals(filtered_df)
 
         def get_ratio(row, group_total_df):
             ''' Uses dfs from get_group_totals to calulate percentage of each skill relative to its parent group '''

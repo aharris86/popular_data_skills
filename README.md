@@ -2,7 +2,9 @@
 # In Demand Data Skills 
 1. Badges
    
+![](popular_data
 
+.gif)
 <H3> Overview </H3>
 Run an interactive dashboard to find the most in demand data skills take from linked in job listing. The dashboard is interactive and filterable enter your job profile find most in demand skills and compare then to another job profile.
 

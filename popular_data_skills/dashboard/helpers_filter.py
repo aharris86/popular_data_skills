@@ -1,10 +1,11 @@
-from utilities import keywords
+import popular_data_skills.utils.keywords as keywords
+import popular_data_skills.config.config as config
 
 KWS_GROUPS_PATH = r'../data/processed_data/keywords/keyword_groups.txt'
 
 # Get lists for keywords class 
 kws = keywords.Keywords()
-kws.read_file(KWS_GROUPS_PATH)
+kws.read_file(config.KEYWORD_GROUPS)
 
 def group_list():
     return list(kws.dict.keys())
