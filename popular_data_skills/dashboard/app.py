@@ -624,4 +624,4 @@ def on_click(job_profile1_button, skill_dropdown, job_profile1_job, job_profile1
 
 
 
-app.run_server(port=8888)
+app.run_server()
