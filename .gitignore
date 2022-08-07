@@ -7,4 +7,5 @@
 /venv
 *__pycache__
 /popular_data_skills/web_scrapers/indeed_scracper.py
-
+/__pycache__
+config.cpython-39

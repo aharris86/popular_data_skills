@@ -1,4 +1,3 @@
-import popular_data_skills.dashboard.app as dashboard
 import popular_data_skills.config.config as config
 import runpy
 
