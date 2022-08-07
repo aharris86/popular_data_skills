@@ -27,3 +27,6 @@ COMMON_WORDS = ROOT_DIR + r'\data\analysis_data\keywords\a_most_common_words.txt
 SELECTED_WORDS = ROOT_DIR + r'\data\analysis_data\keywords\b_selected_words.txt'
 KEYWORDS = ROOT_DIR + r'\data\analysis_data\keywords\c_keywords.txt'
 KEYWORD_GROUPS = ROOT_DIR + r'\data\analysis_data\keywords\d_keyword_groups.txt'
+
+#----- Keywords -----#
+DASHBOARD_SCRIPT =  ROOT_DIR + r'\dashboard\app.py'

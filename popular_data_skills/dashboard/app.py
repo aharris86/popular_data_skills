@@ -9,7 +9,7 @@ import popular_data_skills.dashboard.helpers_plots as plots
 external_stylesheets = [dbc.themes.BOOTSTRAP]
 
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
-
+server = app.server
 # app.css.config.serve_locally = True
 # app.scripts.config.serve_locally = True
 # server = app.server
@@ -623,10 +623,5 @@ def on_click(job_profile1_button, skill_dropdown, job_profile1_job, job_profile1
 #     )
 
 
-# TODO change text to read better
-# TODO style buttons
-# TODO style colours for page and charts
 
-
-if __name__ == "__main__":
-    app.run_server(port=8888)
+app.run_server(port=8888)
