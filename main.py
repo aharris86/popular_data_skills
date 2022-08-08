@@ -4,5 +4,4 @@ import runpy
 def main():
     runpy.run_path(path_name=config.DASHBOARD_SCRIPT)
 
-if __name__ == "__main__":
-    main()
+main()
