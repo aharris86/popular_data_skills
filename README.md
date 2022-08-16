@@ -1,5 +1,5 @@
 <!-- Add banner here -->
-![Banner](popular_data_skills/images/Popular_data_skills_banner.png)
+![Banner](images/Popular_data_skills_banner.png)
 
 # Popular Data skills
 ## Overview 
@@ -18,7 +18,7 @@ You can visit my working [DASHBOARD HERE](https://popular-data-skills-dashboard.
 
 ![Twitter URL](https://img.shields.io/twitter/url?url=https%3A%2F%2Fgithub.com%2Faharris86%2Fpopular_data_skills)
 
-## Project Description
+# Project Description
 Starting out in a data role can be difficult there are so many languages and skills to learn.
 Every tool comes with advantages and disadvantages.  Knowing what to focus and learn can be difficult.
 There are thousands of videos and courses with contradicting inforamtion.
@@ -30,29 +30,24 @@ You can also compare your job profile with a second profile. You can compare pro
 If i change from analyst to scientist, what skills i need to learn now for the future.
 
 
-# Preview
-![Dashboard Gif](popular_data_skills/images/gif-dashboard.gif)
+## Preview
+![Dashboard Gif](images/gif-dashboard.gif)
 
 # Table of contents
-
-After you have introduced your project, it is a good idea to add a **Table of contents** or **TOC** as **cool** people say it. This would make it easier for people to navigate through your README and find exactly what they are looking for.
-
-Here is a sample TOC(*wow! such cool!*) that is actually the TOC for this README.
-
-- [Project Title](#project-title)
-- [Demo-Preview](#preview)
-- [Table of contents](#table-of-contents)
+- [Project Title](#popular-data-skills)
+- [Preview](#preview)
+- [Table of contents](#table-of-contents)  
 - [Installation](#installation)
 - [Usage](#usage)
+- [Exploratory Analysis](#exploratory-analysis)  
 - [Development](#development)
 - [Contribute](#contribute)
-    - [Sponsor](#sponsor)
     - [Adding new features or fixing bugs](#adding-new-features-or-fixing-bugs)
 - [License](#license)
-- [Footer](#footer)
+
 
 # Installation
-[(Back to top)](#table-of-contents)
+[(Back to top)](#table-of-contents)  
 To use this project, first clone the repo on your device using the command below:
 
 ```cd <project_folder>```  # Go to new project folder  
@@ -72,10 +67,10 @@ Run the main.py script in the root folder.
 ### Webscraper
 First enter your linked in username and password in the [config folder.](popular_data_skills/config)  
 Next run the web_scrapers_linkedin_scraper.py  
-For more discussion on how to clone a repo and install look at
-### Analysis
-[See seperate analysis README HERE ](popular_data_skills/exploratory_analysis)  
 
+# Exploratory Analysis
+[(Back to top)](#table-of-contents)  
+See seperate analysis [README HERE](popular_data_skills/exploratory_analysis)  
 
 # Development
 [(Back to top)](#table-of-contents)
@@ -88,18 +83,21 @@ This dataframe is then filtered by the job profile variables and each skill is s
 
 # Contribute
 [(Back to top)](#table-of-contents)  
-
-View the [contribution page here](popular_data_skills/.github/CONTRIBUTING.md)
+ 
+View our [contribution guidelines here](popular_data_skills/.github/ISSUE_TEMPLATE/contributing.md)
 
 ## Adding new features or fixing bugs
-
-View the [Issues and pull requests page here](popular_data_skills/.github/Issue and pull request templates and config.yml)
+We would love any help or advice you have.   
+See the links below if you would like to contribute:  
+[Report a bug](popular_data_skills/.github/ISSUE_TEMPLATE/bug_report)  
+[Feature Request](popular_data_skills/.github/ISSUE_TEMPLATE/feature-request)  
+[Pull Request](popular_data_skills/.github/ISSUE_TEMPLATE/pull_request)  
 
 ## Future works
-Automate web scrapers - allows periodic update of job listings
-Add wages information for each job profile
-Add more jobs to selection - data engineer, junior roles ect
-Scrape more sites - Indeed, glassdoor etc
+Automate web scrapers - allows periodic update of job listings  
+Add wages information for each job profile   
+Add more jobs to selection - data engineer, junior roles ect  
+Scrape more sites - Indeed, glassdoor etc   
 
 # License
 ### [MIT License](https://github.com/aharris86/popular_data_skills/blob/master/LICENCE.md)
