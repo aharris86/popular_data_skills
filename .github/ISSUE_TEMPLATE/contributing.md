@@ -33,4 +33,4 @@ Use the [bug report template](popular_data_skills/.github/ISSUE_TEMPLATE/bug_rep
 By contributing, you agree that your contributions will be licensed under its MIT License.
 
 ## References
-This document was adapted from the open-source contribution guidelines for PurpleBooth/Good-CONTRIBUTING-template(PurpleBooth/Good-CONTRIBUTING.md-template.md)
+This document was adapted from the open-source contribution guidelines for [PurpleBooth/Good-CONTRIBUTING-template](PurpleBooth/Good-CONTRIBUTING.md-template.md)
