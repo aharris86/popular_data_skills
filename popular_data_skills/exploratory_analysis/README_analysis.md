@@ -1,4 +1,4 @@
-![Banner](images/Popular_data_skills_analysis_banner.png)
+![Banner](images_analysis/Popular_data_skills_analysis_banner.png)
 
 # Popular Data Skills Analysis
 
@@ -53,37 +53,37 @@ raw data was then stored in a csv file using pandas.
 # Methodology & Notebooks
 
 ### Data Wrangling 
-**Notebook** - [a_wrangle_data](popular_data_skills/exploratory_analysis/a_wrangle_data.ipynb)  
+**Notebook** - [a_wrangle_data](a_wrangle_data.ipynb)  
 The raw csv file was wrangled using pandas and regex and wordcloud. 
 All duplicate job posts or spam job posts(similar job posts with just a location change) were removed.
 Job post titles were used to create job roles.
 Regex was used to search for digits close to experience to create an experience feature. 
 
 ### Initial common words
-**Notebook** - [b_common_words](popular_data_skills/exploratory_analysis/b_common_words.ipynb)   
+**Notebook** - [b_common_words](b_common_words.ipynb)   
 Initial common words form the entire corpus were used to create a custom skill keyword list. 
 All posts were collated and words were tokenized.  Stop words from the NLTK were removed to reduce the size of the corpus.
 WordNetLemmatizer from NLTK was used to stem words as it is not as harsh as other stemming options. The main use of the stemming was to remove plurals. 
 
 ### Creating custom Keyword list
-**Notebook** - [c_structuring_keywords](popular_data_skills/exploratory_analysis/c_structuring_keywords.ipynb)  
+**Notebook** - [c_structuring_keywords](c_structuring_keywords.ipynb)  
 From the initial common words list. The common words list was scanned manually to select words of interest. 
 Similar meaning words were collated into the same keyword. 
 These keywords were then collected into groups
 of similar interests. These groups are: 'Language', 'Tools', 'Degree', 'Topic', 'Skills', 'Business area'. 
 
-**Class** - [keywords](popular_data_skills/utils/keywords.py)  
+**Class** - [keywords](https://github.com/aharris86/popular_data_skills/blob/master/popular_data_skills/utils/keywords.py))  
 These keywords and groups were stored in a dictionary of lists.
 A class was created to store, update and edit this structure to easily manage the keywords. 
 
 ### Adding features
-**Notebook** - [d_adding_features](popular_data_skills/exploratory_analysis/d_adding_features.ipynb)  
+**Notebook** - [d_adding_features](d_adding_features.ipynb)  
 Each job post was scanned for selected keywords and the results are stored in a dataframe. Totals for each keyword were used 
 to calculate percentage of job posts that contain each keyword. 
 The dataframe is stored as a csv in b_final_data
 
 ### Filter features 
-**Notebook** - [e_filter_features](popular_data_skills/exploratory_analysis/e_filter_features.ipynb)  
+**Notebook** - [e_filter_features](e_filter_features.ipynb)  
 This notebook prepares the data to use in the dashboard.
 The data frame is filtered by the features 'job', 'experience' and 'degree'. Two different profiles can be selected to compare the different in relevant skills.
 The percent of entries relative to the total of the keyword group is calculated in order to give a proportion ratio of each group.  This is easier to comprehend 
@@ -91,25 +91,25 @@ in the dashboard tree.
 Comparison bar charts and treemap were created for visual comparison. 
 
 ### Script
-**Script** - [f_analysis_script](popular_data_skills/exploratory_analysis/f_analysis_script.py)  
+**Script** - [f_analysis_script](f_analysis_script.py)  
 The wrangling and feature selection was compiled into a script for easy future use.
 
 # Results
 Below are the top ten requested skills most of these are requested in over 50% of job posts.   
-![Top ten Skills](popular_data_skills/images/top_ten_skills.png)     
+![Top ten Skills](images_analysis/top_ten_skills.png)     
 This is a good start but these are large areas. The following images narrow down certain areas more.     
 ### Languages 
-![Top languages](popular_data_skills/images/most_popular_languages.png)  
+![Top languages](images_analysis/most_popular_languages.png)  
 ### Degree
-![Top degree](popular_data_skills/images/most_popular_degree.png)  
+![Top degree](images_analysis/most_popular_degree.png)  
 ### Topics
-![Top topics](popular_data_skills/images/most_popular_topics.png)  
+![Top topics](images_analysis/most_popular_topics.png)  
 ### Tools
-![Top tools](popular_data_skills/images/most_popular_tools.png)   
+![Top tools](images_analysis/most_popular_tools.png)   
 ### Skills
-![Top skills](popular_data_skills/images/most_popular_skills.png)   
+![Top skills](images_analysis/most_popular_skills.png)   
 ### Business sectors
-![Top business sector](popular_data_skills/images/most_popular_business_area.png)   
+![Top business sector](images_analysis/most_popular_business_area.png)   
 
 # Conclusion 
 This analysis proposed a different approach to structure learning the required skills to get a job in a data role.
